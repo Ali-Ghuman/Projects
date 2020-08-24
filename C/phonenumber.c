@@ -9,31 +9,51 @@ int main() {
 
    do {
        ch = getchar();
-        if (ch == 'A' ||ch ==  'B' ||ch ==  'C') { 
+       switch (ch) 
+       {
+           case 'A': 
+           case 'B': 
+           case 'C': 
             printf("2"); 
-        }
-        else if (ch == 'D' ||ch ==  'E' ||ch ==  'F') { 
-            printf("3");
-        }
-        else if (ch == 'G' ||ch ==  'H' ||ch ==  'I') { 
+            break;
+           case 'D': 
+           case 'E': 
+           case 'F': 
+            printf("3"); 
+            break;            
+           case 'G': 
+           case 'H': 
+           case 'I': 
             printf("4"); 
-        }
-        else if (ch == 'J' ||ch ==  'K' ||ch ==  'L') { 
+            break;
+           case 'J': 
+           case 'K': 
+           case 'L': 
             printf("5"); 
-        }
-        else if (ch == 'M' ||ch ==  'N' ||ch ==  'O') { 
+            break;
+           case 'M': 
+           case 'N': 
+           case 'O': 
             printf("6"); 
-        }
-        else if (ch == 'P' ||ch ==  'R' ||ch ==  'S') { 
+            break;
+           case 'P': 
+           case 'R': 
+           case 'S': 
             printf("7"); 
-        }
-        else if (ch == 'T' ||ch ==  'U' ||ch ==  'V') { 
+            break;
+           case 'T': 
+           case 'U': 
+           case 'V': 
             printf("8"); 
-        }
-        else if (ch == 'W' ||ch ==  'X' ||ch ==  'Y') { 
+            break;
+           case 'W': 
+           case 'X': 
+           case 'Y': 
             printf("9"); 
-        }
-        else printf("%c", ch);  
+            break;
+           default: 
+            printf("%c", ch);
+       }
     } while(ch != '\n');
 
     return 0; 
