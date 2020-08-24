@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h> 
+#include <ctype.h>
 
 
 int main() {
@@ -8,7 +9,7 @@ int main() {
     printf("Enter a phone number: ");
 
    do {
-       ch = getchar();
+       ch = toupper(getchar());
        switch (ch) 
        {
            case 'A': 
