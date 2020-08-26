@@ -18,7 +18,6 @@ int read_line(char str[], int n);
 
 int main(void)
 { 
-    struct list *count;
     int counter = 0, sort_cap = 50; 
     printf("\n>Welcome to the Alphabetizer! Enter words one at a time to sort them.\n>When you're ready to sort, simply press enter.\n\n");
     while (add())
@@ -45,7 +44,7 @@ int main(void)
     } 
 
     printf("Ordered: ");
-     for (count = words->next; count != NULL; count = count->next) 
+     for (struct list *count = words->next; count != NULL; count = count->next) 
     {
         printf("%s ", count->word);                      // lists all the words after they have been alphabetized 
     }
@@ -58,7 +57,7 @@ int main(void)
 int sort(void) // Sorts the nodes to put them in alphabetical order using strcmp to compare the words within the nodes and then rearraning the nodes 
 {
     struct list *prev, *cur, *prev2;
-    for (cur = words->next, prev = words, prev2 = NULL; cur != NULL && strcmp(cur->word, prev->word) > 0; prev2 = prev, prev = cur, cur = cur->next);
+    for (cur = words->next, prev = words, prev2 = words; cur != NULL && strcmp(cur->word, prev->word) > 0; prev2 = prev, prev = cur, cur = cur->next);
     if (cur == NULL)
     {
         return 0; 
