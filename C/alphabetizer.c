@@ -38,16 +38,16 @@ int main(void)
     }
 
 
-    while(sort_cap > 0)
+    while(sort_cap > 0)   // calls the sort function using a maximum of 50 iterations to run through the loop 
     {
         sort();
         sort_cap--;
     } 
 
     printf("Ordered: ");
-     for (count = words->next; count != NULL; count = count->next)
+     for (count = words->next; count != NULL; count = count->next) 
     {
-        printf("%s ", count->word);
+        printf("%s ", count->word);                      // lists all the words after they have been alphabetized 
     }
     
     printf("\n");   
@@ -55,7 +55,7 @@ int main(void)
 }
 
 
-int sort(void)
+int sort(void) // Sorts the nodes to put them in alphabetical order using strcmp to compare the words within the nodes and then rearraning the nodes 
 {
     struct list *prev, *cur, *prev2;
     for (cur = words->next, prev = words, prev2 = NULL; cur != NULL && strcmp(cur->word, prev->word) > 0; prev2 = prev, prev = cur, cur = cur->next);
@@ -73,7 +73,7 @@ int sort(void)
 }
 
 
-int read_line(char str[], int n)
+int read_line(char str[], int n) //gets input from the user and outputs the length of the string; used later to determine end of input by user 
 {
   int ch, i = 0;
 
@@ -89,7 +89,7 @@ int read_line(char str[], int n)
 }
 
 
-int add(void) 
+int add(void) //adds new words using dynamically allocated memory, the user can enter as many words as they wish 
 {
     struct list *new;
     new = malloc(sizeof(struct list)); 
