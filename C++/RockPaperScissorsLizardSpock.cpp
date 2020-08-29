@@ -1,4 +1,4 @@
-// This program will emulate rock paper scissors, b/w the user and computer
+// This program will emulate rock paper scissors, b/w the user and computer. Can also be done with nested switch statements. 
 
 #include <iostream> 
 #include <stdlib.h> 
