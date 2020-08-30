@@ -8,22 +8,17 @@ int main ()
 
   for (int i = 1; i <= 100; i++)  // if divisible by 3 output Fizz, if divisible by 5 output Buzz, if divisible by both 3 & 5 output FizzBuzz. 
   {
-    if (!(i % fizzbuzz)) 
+    std::string output = "";
+    if (!(i % fizz)) 
     {
-      std::cout << "FizzBuzz\n"; 
+       output += "Fizz"; 
     }
-    else if (!(i % fizz)) 
+    if (!(i % buzz)) 
     {
-      std::cout << "Fizz\n"; 
+       output += "Buzz"; 
     }
-    else if (!(i % buzz)) 
-    {
-      std::cout << "Buzz\n"; 
-    } 
-    else 
-    {
-      std::cout << i << "\n";
-    } 
+    if (output == "") {std::cout << i << "\n";}
+    else {std::cout << output << "\n";}
   }
 
   return 0; 
