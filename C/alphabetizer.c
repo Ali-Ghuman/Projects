@@ -54,7 +54,7 @@ int main(void)
 }
 
 
-int sort(void) // Sorts the nodes to put them in alphabetical order using strcmp to compare the words within the nodes and then rearraning the nodes 
+int sort(void) // Sorts the nodes to put them in alphabetical order using strcmp to compare the words within the nodes and then rearranging the nodes 
 {
     struct list *prev, *cur, *prev2;
     for (cur = words->next, prev = words, prev2 = words; cur != NULL && strcmp(cur->word, prev->word) > 0; prev2 = prev, prev = cur, cur = cur->next);
