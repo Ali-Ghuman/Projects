@@ -11,7 +11,7 @@ int main()
 
   while (!quit) 
   {
-    int select = rand() % 10;
+    int select = rand() % 12;
     std::vector<std::string> vec_codeword = {"youtube", "nose", "wassup","dinosaurs", "chocolate", "pumpkin", "salutations", "janitor", "engineer", "attorney", "ankle", "google"}; 
     std::string codeword = vec_codeword[select];  //sets codeword to a random word from vec_codeword
     std::string answer= "";
@@ -22,7 +22,7 @@ int main()
     } 
 
     int misses = 0; 
-    std::vector<char> incorrect; 
+    std::vector<char> incorrect(12); 
     bool guess = false; 
     char letter, again; 
     

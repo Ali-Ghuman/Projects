@@ -8,7 +8,7 @@
   
 
   testbleep(word, text); 
-  std::cout << text;
+  std::cout << text << '\n'; 
 
    return 0; 
  }
