@@ -22,7 +22,7 @@ int main(void)
     std::cout << "Type a number: "; 
     std::cin >> choice;
 
-    if (symbol == true) //selects x first and then alternates to x and o. Increments tie.  
+    if (symbol == true) //selects x first and then alternates between x and o. Increments tie.  
     { 
       if (choose[choice-1] == 'X' || choose[choice-1] == 'O')
       {
@@ -50,7 +50,7 @@ int main(void)
     }  
     
   win(choose);
-    if (win(choose) == 1) // if the function returns a 1, the game has ended with one of the players winning. Otherwise, it is be a tie. 
+    if (win(choose) == 1) // if the function returns a 1, the game has ended with one of the players winning. Otherwise, it is a tie. 
     {
       return 0; 
     } 

@@ -18,7 +18,7 @@ int read_line(char str[], int n);
 
 int main(void)
 { 
-    int counter = 0, sort_cap = 50; 
+    int counter = 0, sort_cap = 1000; 
     printf("\n>Welcome to the Alphabetizer! Enter words one at a time to sort them.\n>When you're ready to sort, simply press enter.\n\n");
     while (add())
     {
@@ -37,7 +37,7 @@ int main(void)
     }
 
 
-    while(sort_cap > 0)   // calls the sort function using a maximum of 50 iterations to run through the loop 
+    while(sort_cap > 0)   // calls the sort function using a maximum of 1k iterations to run through the loop 
     {
         sort();
         sort_cap--;
