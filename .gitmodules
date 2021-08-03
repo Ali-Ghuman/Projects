@@ -1,0 +1,3 @@
+[submodule "CompArch"]
+	path = CompArch
+	url = git@github.com:Ali-Ghuman/CompArch.git
